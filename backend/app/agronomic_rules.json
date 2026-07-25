@@ -1,0 +1,38 @@
+{
+  "Tomato_Late_Blight": {
+    "visual_concepts_required": ["water_soaked_spots", "necrotic_lesions"],
+    "environmental_conditions": {
+      "min_humidity": 0.85,
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.2,
+    "logic_rule_text": "If Tomato_Late_Blight THEN (Water Soaked Spots AND Necrotic Lesions AND High Humidity)"
+  },
+  "Tomato_Early_Blight": {
+    "visual_concepts_required": ["chlorotic_halos", "concentric_rings"],
+    "environmental_conditions": {
+      "min_humidity": 0.70,
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 1.0,
+    "logic_rule_text": "If Tomato_Early_Blight THEN (Concentric Rings AND Chlorotic Halos AND Moderate Humidity)"
+  },
+  "Apple_Scab": {
+    "visual_concepts_required": ["velvety_spots", "leaf_curling"],
+    "environmental_conditions": {
+      "min_humidity": 0.80,
+      "leaf_wetness_required": true
+    },
+    "severity_multiplier": 1.1,
+    "logic_rule_text": "If Apple_Scab THEN (Velvety Spots AND Leaf Curling AND Leaf Wetness)"
+  },
+  "Healthy": {
+    "visual_concepts_required": ["healthy_tissue"],
+    "environmental_conditions": {
+      "min_humidity": 0.0,
+      "leaf_wetness_required": false
+    },
+    "severity_multiplier": 0.0,
+    "logic_rule_text": "If Healthy THEN (Healthy Tissue)"
+  }
+}

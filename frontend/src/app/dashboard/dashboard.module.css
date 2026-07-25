@@ -1,0 +1,269 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 24px;
+  gap: 24px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  animation: fadeDown 0.5s ease-out;
+}
+
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--success), var(--primary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.logoutBtn {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--surface-border);
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.logoutBtn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  flex: 1;
+  animation: fadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.panel {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+/* Upload Area */
+.uploadArea {
+  border: 2px dashed var(--surface-border);
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgba(15, 23, 42, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.uploadArea:hover {
+  border-color: var(--primary);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.uploadIcon {
+  color: var(--primary);
+  width: 48px;
+  height: 48px;
+}
+
+.previewImg {
+  max-width: 100%;
+  max-height: 200px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+/* Controls */
+.controlGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.controlHeader {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.slider {
+  width: 100%;
+  accent-color: var(--primary);
+}
+
+.analyzeBtn {
+  margin-top: auto;
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+}
+
+/* Results Area */
+.resultsEmpty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary);
+  opacity: 0.5;
+  gap: 12px;
+}
+
+.resultsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  animation: fadeIn 0.4s ease-in;
+}
+
+.diagnosisHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.hypothesis {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--danger);
+  margin-bottom: 4px;
+}
+
+.severityBadge {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.gradCamContainer {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--surface-border);
+}
+
+.gradCamImg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gradCamLabel {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(4px);
+  padding: 8px 12px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Progress Bars for Neural Perception */
+.perceptionList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.perceptionItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.perceptionLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+}
+
+.progressBarBg {
+  width: 100%;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 3px;
+  transition: width 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.logicBox {
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 4px solid var(--success);
+  padding: 16px;
+  border-radius: 0 8px 8px 0;
+}
+
+.logicText {
+  font-family: monospace;
+  font-size: 0.9rem;
+  color: var(--success);
+  margin-bottom: 8px;
+}
+
+.explanation {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .mainGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@keyframes fadeDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
